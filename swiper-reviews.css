@@ -1,0 +1,261 @@
+:root {
+  --primary-white-color: #fcfcfc;
+
+--primary-text-color: #131313;
+
+--primary-background-color: #84a178;
+
+--cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0px;
+	margin: 0px;
+	border: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.container {
+  margin: 0 auto;
+  background-color: rgb(253, 255, 151);}
+
+  @media screen and (max-width: 480px) {
+  .container {max-width: 480px;
+    padding-right: 20px;
+    padding-left: 20px;}
+ 
+}
+  @media screen and (min-width: 768px) {
+    .container { max-width: 768px;
+      padding-right: 32px;
+      padding-left: 32px;}
+   
+  }
+  @media screen and (min-width: 1200px) {
+    .container {max-width: 1200px;
+      padding-right: 16px;
+      padding-left: 16px;}
+    
+  }
+
+.wrapper {
+  /* height: 100%; */
+  display: flex;
+   margin-left: auto;
+  margin-right: auto;
+}
+
+/* gallery */
+.top-slider {
+
+  margin-top: -32px;
+   margin-bottom: 80px;}
+   
+   @media screen and (min-width: 768px) {
+    .top-slider {margin-top: -144px;
+      margin-bottom: 100px;}
+   }
+   @media screen and (min-width: 1200px) {
+    .top-slider {margin-top: -98px;
+      margin-bottom: 140px;} 
+   }
+
+
+.gallery-slide-img {
+  margin-right: 20px;
+  margin-left: 20px;}
+
+  @media screen and (min-width: 768px) {
+    .gallery-slide-img {   margin-right: 32px;
+      margin-left: 32px;}
+  }
+  @media screen and (min-width: 1200px) {
+    .gallery-slide-img { margin-right: 94px;
+      margin-left: 93px;}
+  }
+
+
+.gallery-img {
+   max-width: 100%;
+   /* margin: 0 auto; */
+   padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+
+/* Reviews*/
+
+.slider {
+  margin-bottom: 40px;}
+
+  @media screen and (min-width: 768px){
+    .slider { margin-bottom: 80px;}
+      }
+  @media screen and (min-width: 1200px){
+        .slider {margin-bottom: 100px;
+        }
+      }
+      
+.slider__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.reviews__photo {
+  display: block;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reviews__text {
+  border-radius: 24px;
+  background-color: var(--primary-background-color);
+  text-align: center;
+  color: var(--primary-white-color);
+  letter-spacing: 0.04em;
+  margin: 32px 20px;
+  padding: 35px 39px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 255%;}
+
+  @media screen and (min-width: 768px) {
+    .reviews__text {padding: 28px 80px 29px;
+      margin-left: 32px;
+      margin-right: 31px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 186%;} 
+ 
+  }
+
+  @media screen and (min-width: 1200px) {
+    .reviews__text {margin: 32px 116px 32px 115px;
+      padding: 43px 109px;
+      font-size: 16px;
+      line-height: 186%;}
+    
+  }
+
+
+.reviews__data {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 186%;
+  margin-bottom: 32px;
+  color: var(--primary-text-color);}
+  @media screen and (max-width: 767px) {
+    .reviews__data {font-size: 20px;}
+  }
+
+
+
+
+/* Слайдер */
+
+
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+  display: flex;
+}
+
+
+
+/* Слайдер галерея */
+.top-slider {
+   min-width: 0; 
+  position: relative;
+  margin-left: auto;
+   margin-right: auto;
+}
+
+/* Слайдер отзывы */
+.slider {
+  min-width: 0; 
+  position: relative;
+}
+
+.slider .slick-dots{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider .slick-dots li{
+  list-style: none;
+}
+.slider .slick-dots li:not(:last-child){
+  margin-right: 18px;
+}
+/* Активная точка */
+.slider .slick-dots li.slick-active button{
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-background-color);
+}
+/* Элемент точки */
+.slider .slick-dots li button{
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #D9D9D9;;
+  border-radius: 50%;
+  color: #84a178;
+}
+
+.slider .slick-dots li button::before{
+  content: ' ';
+}
